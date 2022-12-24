@@ -60,8 +60,8 @@ window:
     x: 2
     y: 2
   dimensions:
-    columns: 80
-    lines: 30
+    columns: 150
+    lines: 50
   opacity: 0.9
 
 scrolling:
