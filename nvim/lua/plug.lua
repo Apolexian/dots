@@ -42,7 +42,14 @@ return require('packer').startup(function(use)
 	use "nvim-treesitter/nvim-treesitter"
 	-- Theme
 	use 'bluz71/vim-nightfly-colors'
-	use "lukas-reineke/indent-blankline.nvim"
+	use 'glepnir/dashboard-nvim'
+	use {
+            "lukas-reineke/indent-blankline.nvim",
+  	    config = function()
+    	    require("indent_blankline").setup { filetype_exclude = { "dashboard" }
+    	    }
+  	    end
+	}
 	-- Latex
 	use 'lervag/vimtex'
 
@@ -57,12 +64,18 @@ return require('packer').startup(function(use)
 	-- Git QOL
 	 use('tpope/vim-fugitive')
 	-- Transparent
-	use({
+	 use({
   		"xiyaowong/nvim-transparent",
   		config = function()
     		require("transparent").setup {
       		enable = true,
-    	}
-  end
-})
+    		}
+  		end 
+	})
+	-- Auto brackets
+	use {
+	"windwp/nvim-autopairs",
+    	config = function() require("nvim-autopairs").setup {} end
+	}
 end)
+
