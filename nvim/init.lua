@@ -99,9 +99,7 @@ autocmd("BufWinEnter", {
     end,
 })
 
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 -- RUST TOOLS ------------------------------------------------
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
 local rt = require("rust-tools") -- rust tools
 rt.setup({
