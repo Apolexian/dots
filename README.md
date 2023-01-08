@@ -37,12 +37,16 @@ Quit neovim and enter it again.
 Follow installation at `https://www.lunarvim.org/`.
 Copy the config over.
 
+## Default terminal
+
 Make alacritty the default terminal:
 
 ```bash
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/alacritty 50
 sudo update-alternatives --config x-terminal-emulator
 ```
+
+## Run compton on start
 
 To run compton:
 
@@ -52,6 +56,8 @@ compton --config ~/.config/compton/compton.conf
 
 Put in some script that runs on startup on your system like `.xinitrc`.
 Generally, compton config is pretty specific to system so go through compton docs to customise.
+
+## Neofetch
 
 Neofetch, add to .bashrc or .zshrc or whatever:
 
