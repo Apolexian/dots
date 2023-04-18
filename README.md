@@ -2,6 +2,8 @@ Base of system:
 
 https://arcolinux.com/
 
+No longer updated on github, source now at: https://git.sr.ht/~apolexian/dots
+
 # Reqs
 
 * Rust
